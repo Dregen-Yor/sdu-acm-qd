@@ -4,32 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '什么是ICPC',
+    Svg: require('@site/static/img/ICPCLogo.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        ICPC（英文：International Collegiate Programming Contest，
+        中文：国际大学生程序设计竞赛）<br></br>由 ICPC 基金会（英文：ICPC Foundation）举办，
+        是最具影响力的大学生计算机竞赛。由于以前 ACM 赞助这个竞赛，也有很多人习惯叫它 ACM 竞赛。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '赛制介绍',
+    Svg: require('@site/static/img/ICPCLogo.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        一般是三个人组成一队使用一台机器，在比赛时有多次提交机会。比赛实时评测并返回结果，如果提交的结果错误会有 20 分钟的罚时，错误次数越多，加罚的时间也越长。每个题目只有在所有数据点全部正确后才能得到分数。比赛排名根据做题数来评判，做题数相同的，根据总用时来评判。总用时是每题用时的和。每题的用时是从比赛开始到做出该题的分钟数与该题的罚时之和。
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '为什么要打ICPC',
+    Svg: require('@site/static/img/ICPCLogo.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        参加ICPC系列赛事，可以极大地提高你的编程能力，提升算法知识，锻炼思维，锻炼团队合作能力，结交各路好友。
+
+        除此之外，ICPC系列赛事还是各大互联网公司招聘的重要渠道，很多公司都会在ICPC系列赛事中挖掘人才，在ICPC中获奖也可以极大地提高你的综测分成绩。
       </>
     ),
   },
