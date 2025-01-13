@@ -46,7 +46,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Dregen-Yor/sdu-acm-qd/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,13 +55,8 @@ const config = {
             xslt: true,
           },
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/Dregen-Yor/sdu-acm-qd/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,6 +65,18 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'wiki',
+        path: 'wiki',
+        routeBasePath: 'wiki',
+        sidebarPath: './sidebarsWiki.js',
+        editUrl: 'https://github.com/Dregen-Yor/sdu-acm-qd/tree/main/',
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -78,19 +85,24 @@ const config = {
       navbar: {
         title: '山东大学（青岛）ACM实验室',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'SDU logo',
+          src: 'img/sdu-logo.png',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '关于本站',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '博客', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            to: '/wiki/intro',
+            label: 'Wiki',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/Dregen-Yor/sdu-acm-qd',
             label: 'GitHub',
             position: 'right',
           },

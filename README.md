@@ -1,41 +1,19 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+该网站使用 [Docusaurus](https://docusaurus.io/) 进行构建。
 
-### Installation
+该网站旨在扩展计算机领域，特别是算法领域知识，记录实验室一些日常事项。
 
-```
-$ yarn
-```
+## 关于分类
 
-### Local Development
+- 在 `wiki` 部分存放基础性的算法知识。
 
-```
-$ yarn start
-```
+- 在 `blog` 部分存放个人的学习心得，游记，ICPC题解等。
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 如何贡献
 
-### Build
+- [博客](blog/README.md)
 
-```
-$ yarn build
-```
+- [知识库]()
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

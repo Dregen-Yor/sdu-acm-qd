@@ -1,12 +1,11 @@
 yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+  name: 孙更欣
+  title: 2024-2025学年负责人，ICPC铜牌
+  url: https://github.com/Dregen-Yor
+  image_url: https://github.com/Dregen-Yor.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    github: Dregen-Yor
 
 slorber:
   name: Sébastien Lorber
