@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+misc:
+  label: 杂项
+  permalink: /misc
+  description: 一些与算法知识无关但比较有用的内容

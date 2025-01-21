@@ -1,4 +1,4 @@
-yangshun:
+sgx:
   name: 孙更欣
   title: 2024-2025学年负责人，ICPC铜牌
   url: https://github.com/Dregen-Yor
@@ -7,16 +7,4 @@ yangshun:
   socials:
     github: Dregen-Yor
 
-slorber:
-  name: 示例
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+
