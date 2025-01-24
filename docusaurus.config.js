@@ -60,6 +60,8 @@ const config = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/Dregen-Yor/sdu-acm-qd/tree/main/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -85,6 +87,8 @@ const config = {
         routeBasePath: 'wiki',
         sidebarPath: './sidebarsWiki.js',
         editUrl: 'https://github.com/Dregen-Yor/sdu-acm-qd/tree/main/',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       },
     ],
   ],
