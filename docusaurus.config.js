@@ -96,12 +96,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/sdu-acm-cut.png',
       navbar: {
         title: '山东大学（青岛）ACM实验室',
         logo: {
           alt: 'SDU logo',
-          src: 'img/sdu-logo.png',
+          src: 'img/sdu-acm-cut.png',
         },
         items: [
           {
@@ -139,12 +139,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'BiliBili',
+                href: 'https://space.bilibili.com/488809409',
               },
             ],
           },
@@ -157,7 +153,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Dregen-Yor/sdu-acm-qd',
               },
             ],
           },

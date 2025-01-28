@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
@@ -39,6 +40,7 @@ export default function Home() {
         <HomepageFeatures />
       </main>
       <Analytics />
+      <SpeedInsights/>
     </Layout>
   );
 }
