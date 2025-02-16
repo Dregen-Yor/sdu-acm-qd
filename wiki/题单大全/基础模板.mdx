@@ -1,13 +1,10 @@
-## 计算几何
-import {Table,Tag,ConfigProvider} from 'antd';
+import {Table,ConfigProvider} from 'antd';
+import {dataSource,columns} from './problem-list/templete-list.jsx'
 
-import {dataSource,columns} from './problem-list/geometry-list.jsx'
+## 基础模板题
 
 <details>
-
-    <summary>詹靖杰提供</summary>
-
-    
+    <summary>薛润泽提供</summary>
     <ConfigProvider  theme={{
       token: {
         // Seed Token，影响范围大
@@ -20,11 +17,8 @@ import {dataSource,columns} from './problem-list/geometry-list.jsx'
         borderColor: '#0C1CB4E6',
       }
     }}>
-        <Table dataSource={dataSource} columns={columns} pagination={false}/>
+    <Table dataSource={dataSource} columns={columns} pagination={false}/>
 
     </ConfigProvider>
+
 </details>
-
-
-
-
