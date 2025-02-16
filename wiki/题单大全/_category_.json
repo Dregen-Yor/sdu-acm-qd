@@ -1,9 +1,9 @@
 {
-    "label": "动态规划",
+    "label": "题单大全",
     "position": 2,
     "link": {
       "type": "generated-index",
-      "description": "动态规划相关知识"
+      "description": "历代成员的训练题单"
     }
   }
   
