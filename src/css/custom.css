@@ -28,3 +28,145 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+.ant-table {
+  background: transparent;
+  width: 100%;
+}
+
+.ant-table-thead > tr > th {
+  background: transparent;
+}
+
+.ant-table-tbody > tr > td {
+  background: transparent;
+}
+
+details > summary + .ant-table-wrapper {
+  width: 100%;
+}
+
+::v-deep.ant-table {
+  color: #ffffff !important;
+}
+::v-deep .ant-table-scroll-position-left,
+::v-deep .ant-table-scroll-position-right,
+::v-deep .ant-table-scroll-position-middle {
+  .ant-table-content .ant-table-scroll .ant-table-header {
+    overflow: hidden !important;
+    padding-bottom: 8px !important;
+  }
+}
+::v-deep .ant-table-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-right: 1px solid #302c2d !important;
+  ::-webkit-scrollbar {
+    width: 0 !important; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #058694; 
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+::v-deep .ant-table-thead tr {
+  background-color: #000e1e !important;
+}
+::v-deep .ant-table-thead > tr > th {
+  height: 36px;
+  padding: 0 8px !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  border: 1px solid #302c2d;
+}
+::v-deep .ant-table-tbody tr {
+  background-color: transparent !important;
+}
+::v-deep .ant-table-tbody > tr > td {
+  height: 36px;
+  padding: 0 8px !important;
+  margin: 0 !important;
+  border: 1px solid #302c2d;
+}
+::v-deep .ant-table-small.ant-table-bordered .ant-table-fixed-left {
+  .ant-table-thead > tr > th:last-child,
+  .ant-table-tbody > tr > td:last-child {
+    border-right: 1px solid #302c2d;
+  }
+}
+::v-deep .ant-table-small {
+  border: 1px solid #302c2d;
+}
+
+::v-deep .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background: #808104;
+}
+::v-deep .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background: #808104;
+}
+
+::v-deep .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: auto !important;
+  color: #fff;
+  background-color: transparent !important;
+}
+::v-deep .ant-table-fixed-left table {
+  color: #fff;
+  background: #000e1e;
+}
+::v-deep .ant-table-fixed-header .ant-table-fixed-left .ant-table-body-outer .ant-table-fixed {
+  color: #fff;
+  background: transparent;
+}
+ 
+::v-deep .ant-table-placeholder {
+  background-color: transparent !important;
+  border: none !important;
+}
+ 
+::v-deep .ant-empty-normal {
+  color: #fff !important;
+}
+::v-deep.ant-pagination {
+  color: #3f525a !important;
+}
+ 
+::v-deep .ant-pagination-item {
+  background-color: transparent !important;
+  border-color: #47ffff !important;
+}
+ 
+::v-deep .ant-pagination-item-link {
+  background-color: transparent !important;
+  border-color: #47ffff !important;
+  color: #fff !important;
+}
+ 
+::v-deep .ant-pagination-prev .ant-pagination-item-link {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+ 
+::v-deep .ant-pagination-next:hover .ant-pagination-item-link {
+  color: #fff !important;
+}
+ 
+::v-deep .ant-pagination-item-active {
+  background: #fff !important;
+  border-color: #fff !important;
+}
+ 
+::v-deep .ant-pagination-item a {
+  color: #fff !important;
+}
+ 
+::v-deep .ant-pagination-item-active a {
+  color: #ffffff !important;
+}

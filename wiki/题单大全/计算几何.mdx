@@ -1,8 +1,28 @@
 ## 计算几何
+import {Table,Tag,ConfigProvider} from 'antd';
+
+import {dataSource,columns} from './problem-list/geometry-list.jsx'
+
 <details>
 
     <summary>詹靖杰提供</summary>
 
+    
+    <ConfigProvider  theme={{
+      token: {
+        // Seed Token，影响范围大
+        colorBgContainer: 'rgba(0, 0, 0, 0)',
+        
+      },
+      Table: {
+        headerBg: '#bae0ff',
+        headerSplitColor: '#bae0ff',
+        borderColor: '#0C1CB4E6',
+      }
+    }}>
+        <Table dataSource={dataSource} columns={columns} pagination={false}/>
+
+    </ConfigProvider>
 - [Balloon Darts](https://qoj.ac/problem/7653)
 
 - [Convex Checker](https://qoj.ac/problem/7730)
@@ -23,4 +43,28 @@
 
 - [Airport Construction](https://qoj.ac/problem/2767)
 
+- [Building Boundaries](https://qoj.ac/problem/3922)
+
+- [Disc District](https://qoj.ac/problem/4991)
+
+- [AMPPZ in the times of disease](https://qoj.ac/problem/4423)
+
+- [Farm](https://qoj.ac/problem/7947)
+
+- [Clearing Space](https://qoj.ac/problem/7842)
+
+- [Glacier Travel](https://qoj.ac/problem/7846)
+
+- [Christmas Sky](https://qoj.ac/problem/7934)
+
+- [Domes](https://qoj.ac/problem/2162)
+
+- [Health in Hazard](https://codeforces.com/gym/104736/problem/H)
+
+- [H-Shaped Figures](https://qoj.ac/problem/7803)
+
 </details>
+
+
+
+
