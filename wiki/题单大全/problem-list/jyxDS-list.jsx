@@ -23,7 +23,7 @@ const dataSource = [
     problem: '小鸡的排列构造的checker',
     link: 'https://ac.nowcoder.com/acm/contest/95338/I',
     diff: '1800',
-    tag: ['离线', 树状数组'],
+    tag: ['离线', '树状数组'],
   },
   {
     key: '4',
