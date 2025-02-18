@@ -1,1 +1,24 @@
+import {Table,ConfigProvider} from 'antd';
+import {dataSource,columns} from './problem-list/jyxDS-list.jsx'
 
+## 数据结构基础
+
+<details>
+    <summary>荆昱熹提供</summary>
+    <ConfigProvider  theme={{
+      token: {
+        // Seed Token，影响范围大
+        colorBgContainer: 'rgba(0, 0, 0, 0)',
+        
+      },
+      Table: {
+        headerBg: '#bae0ff',
+        headerSplitColor: '#bae0ff',
+        borderColor: '#0C1CB4E6',
+      }
+    }}>
+    <Table dataSource={dataSource} columns={columns} pagination={false}/>
+
+    </ConfigProvider>
+
+</details>
