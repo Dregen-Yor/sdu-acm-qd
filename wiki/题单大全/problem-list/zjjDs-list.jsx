@@ -3,7 +3,7 @@ import React from 'react';
 import { Table, Tag, Typography } from 'antd';
 const { Text, Link } = Typography;
 
-const dataSource = [
+const dataSource2 = [
   {
     key: '1',
     problem: 'Static RMQ',
@@ -69,7 +69,7 @@ const dataSource = [
   },
 ];
 
-const columns = [
+const columns2 = [
   {
     title: '题目',
     dataIndex: 'problem',
@@ -123,4 +123,4 @@ const columns = [
   },
 ]
 
-export { dataSource, columns };
+export { dataSource2, columns2 };
