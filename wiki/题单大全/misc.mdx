@@ -1,3 +1,6 @@
+import {Table,ConfigProvider} from 'antd';
+import {dataSource2,columns2} from './problem-list/zjjvp-list.jsx'
+
 ## 人类智慧题（大部分是交互）
 <details>
   <summary>詹靖杰提供</summary>
@@ -35,4 +38,25 @@
 
 - [Nullify The Matrix](https://codeforces.com/problemset/problem/1451/F)
 
+</details>
+
+## 区域赛杂题精选
+<details>
+    <summary>詹靖杰提供(基本是基础题)</summary>
+    <ConfigProvider  theme={{
+      token: {
+        // Seed Token，影响范围大
+        colorBgContainer: 'rgba(0, 0, 0, 0)',
+        
+      },
+      Table: {
+        headerBg: '#bae0ff',
+        headerSplitColor: '#bae0ff',
+        borderColor: '#0C1CB4E6',
+      }
+    }}>
+    <Table dataSource={dataSource2} columns={columns2} pagination={false}/>
+
+    </ConfigProvider>
+  
 </details>
