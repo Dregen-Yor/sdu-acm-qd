@@ -88,4 +88,4 @@ const columns2 = [
   },
 ]
 
-export { dataSource, columns };
+export { dataSource2, columns2 };
