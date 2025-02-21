@@ -1,6 +1,8 @@
 import {Table,ConfigProvider} from 'antd';
 import {dataSource,columns} from './problem-list/jyxDS-list.jsx'
 
+import {dataSource2,columns2} from './problem-list/zjjDS-list.jsx'
+
 ## 数据结构基础
 
 <details>
@@ -18,6 +20,23 @@ import {dataSource,columns} from './problem-list/jyxDS-list.jsx'
       }
     }}>
     <Table dataSource={dataSource} columns={columns} pagination={false}/>
+
+    </ConfigProvider>
+
+    <summary>詹靖杰提供(基本是基础题)</summary>
+    <ConfigProvider  theme={{
+      token: {
+        // Seed Token，影响范围大
+        colorBgContainer: 'rgba(0, 0, 0, 0)',
+        
+      },
+      Table: {
+        headerBg: '#bae0ff',
+        headerSplitColor: '#bae0ff',
+        borderColor: '#0C1CB4E6',
+      }
+    }}>
+    <Table dataSource={dataSource2} columns={columns2} pagination={false}/>
 
     </ConfigProvider>
 
