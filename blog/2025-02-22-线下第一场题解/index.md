@@ -20,7 +20,7 @@ tags: [solution]
 
 ## B
 
-[原题链接](https://codeforces.com/contest/1891/problem/F)
+[原题链接](https://codeforces.com/contest/1946/problem/B)
 
 最大字段和模板，找出最大字段和并一直在最大字段和的末尾插入最大字段和，之后最大值翻倍，这样一直加 $k$ 次。
 
@@ -201,4 +201,81 @@ signed main(){
 倒过来之后把插入点改为将点的值修改为 $0$。
 
 用树剖和线段树维护子树和即可。
+
+## F
+
+一道 $\mathcal O(n^4)$ 的 DP。
+
+考虑设置状态 $dp_{i,j,k}$，其中 $i$ 表示前 $i$ 个瓶子，$j$ 表示其中选择了 $j$ 个瓶子作为容器，$k$ 表示剩余瓶子的容量。状态转移方程如下：
+
+$$dp_{i,j+1,k+b_i-a_i}=\max{dp_{i-1,j,k}}$$
+
+$$dp_{i,j,k-a_i}=\max{dp_{i-1,j,k-a_i}}$$
+
+<details>
+
+    <summary>代码</summary>
+    ~~~cpp
+    #include<bits/stdc++.h>
+    #define M 20000
+    #define N 200010
+    #define ls x<<1
+    #define rs x<<1|1
+    #define MID ((l+r)>>1)
+    #define mkp(a,b) make_pair(a,b)
+    // mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+    //#define int long long
+    //#define P pair<int,int>
+    using namespace std;
+    int T=1,n,m;
+    vector<int>a,b;
+    int dp[2][110][M+10];
+    signed main(){
+        // scanf("%d",&T);
+        while(T--){
+            scanf("%d",&n);
+            a.resize(n+1);
+            b.resize(n+1);
+            for(int i=1;i<=n;i++){
+                scanf("%d",&a[i]);
+            }
+            for(int i=1;i<=n;i++){
+                scanf("%d",&b[i]);
+                b[i]-=a[i];
+            }
+            for(int i=0;i<2;i++)for(int j=0;j<=n;j++)for(int k=0;k<=20000;k++) dp[i][j][k]=1e9;
+            dp[0][0][10000]=0;
+            for(int i=1;i<=n;i++){
+                int x=i&1;
+                for(int j=0;j<=n;j++){
+                    for(int k=0;k<=M;k++){
+                        dp[x][j][k]=1e9;
+                    }
+                }
+                for(int j=0;j<=n;j++){
+                    for(int k=0;k<=M;k++){
+                        if(k+b[i]<=M){
+                            dp[x][j+1][k+b[i]]=min(dp[x][j+1][k+b[i]],dp[x^1][j][k]);
+                        }
+                        if(k-a[i]>=0){
+                            dp[x][j][k-a[i]]=min(dp[x][j][k-a[i]],dp[x^1][j][k]+a[i]);
+                        }
+                    }
+                }
+            }
+            for(int i=1;i<=n;i++){
+                int ans=1e9;
+                for(int j=10000;j<=M;j++){
+                    ans=min(ans,dp[n&1][i][j]);
+                }
+                if(ans<1e9){
+                    printf("%d %d\n",i,ans);
+                    return 0;
+                }
+            }
+        }
+        return 0;
+    }
+    ~~~
+</details>
 
