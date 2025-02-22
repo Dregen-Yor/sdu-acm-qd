@@ -13,10 +13,10 @@ docusaurus:
   permalink: /docusaurus
   description: Docusaurus tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+solution:
+  label: 题解
+  permalink: /solution
+  description: 一些题解
 
 misc:
   label: 杂项
