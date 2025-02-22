@@ -22,7 +22,7 @@ tags: [solution]
 
 [原题链接](https://codeforces.com/contest/1946/problem/B)
 
-最大字段和模板，找出最大字段和并一直在最大字段和的末尾插入最大字段和，之后最大值翻倍，这样一直加 $k$ 次。
+最大子段和模板，找出最大子段和并一直在最大子段和的末尾插入最大子段和，之后最大值翻倍，这样一直加 $k$ 次。
 
 注意子数组可以为空。
 
@@ -57,67 +57,67 @@ tags: [solution]
 <details>
     <summary>代码</summary>
     ~~~cpp
-#include<bits/stdc++.h>
-#define N 200010
-#define ls x<<1
-#define rs x<<1|1
-#define MID ((l+r)>>1)
-#define mkp(a,b) make_pair(a,b)
-// mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
-//#define int long long
-//#define P pair<int,int>
-using namespace std;
-vector<int>G[N];
-int T=1,n,k,cnt;
-int dfs(int x,int fa,int ans){
-    int res=1;
-    for(int to:G[x]){
-        if(to==fa)continue;
-        res+=dfs(to,x,ans);
+    #include<bits/stdc++.h>
+    #define N 200010
+    #define ls x<<1
+    #define rs x<<1|1
+    #define MID ((l+r)>>1)
+    #define mkp(a,b) make_pair(a,b)
+    // mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+    //#define int long long
+    //#define P pair<int,int>
+    using namespace std;
+    vector<int>G[N];
+    int T=1,n,k,cnt;
+    int dfs(int x,int fa,int ans){
+        int res=1;
+        for(int to:G[x]){
+            if(to==fa)continue;
+            res+=dfs(to,x,ans);
+        }
+        if(res>=ans){
+            cnt++;
+            return 0;
+        }
+        return res;
     }
-    if(res>=ans){
-        cnt++;
+    bool check(int x){
+        cnt=0;
+        dfs(1,0,x);
+        if(cnt>k){
+            return true;
+        }
+        return false;
+    }
+    void solve(){
+        int l=0,r=100001;
+        int ans=0;
+        while(l<=r){
+            if(check(MID)){
+                ans=MID;
+                l=MID+1;
+            }
+            else{
+                r=MID-1;
+            }
+        }
+        printf("%d\n",ans);
+    }
+    signed main(){
+        scanf("%d",&T);
+        while(T--){
+            scanf("%d%d",&n,&k);
+            for(int i=1;i<=n;i++)G[i].clear();
+            for(int i=1;i<n;i++){
+                int u,v;
+                scanf("%d%d",&u,&v);
+                G[u].push_back(v);
+                G[v].push_back(u);
+            }
+            solve();
+        }
         return 0;
     }
-    return res;
-}
-bool check(int x){
-    cnt=0;
-    dfs(1,0,x);
-    if(cnt>k){
-        return true;
-    }
-    return false;
-}
-void solve(){
-    int l=0,r=100001;
-    int ans=0;
-    while(l<=r){
-        if(check(MID)){
-            ans=MID;
-            l=MID+1;
-        }
-        else{
-            r=MID-1;
-        }
-    }
-    printf("%d\n",ans);
-}
-signed main(){
-    scanf("%d",&T);
-    while(T--){
-        scanf("%d%d",&n,&k);
-        for(int i=1;i<=n;i++)G[i].clear();
-        for(int i=1;i<n;i++){
-            int u,v;
-            scanf("%d%d",&u,&v);
-            G[u].push_back(v);
-            G[v].push_back(u);
-        }
-        solve();
-    }
-    return 0;
-}
 
     ~~~
 </details>
@@ -208,9 +208,9 @@ signed main(){
 
 考虑设置状态 $dp_{i,j,k}$，其中 $i$ 表示前 $i$ 个瓶子，$j$ 表示其中选择了 $j$ 个瓶子作为容器，$k$ 表示剩余瓶子的容量。状态转移方程如下：
 
-$$dp_{i,j+1,k+b_i-a_i}=\max{dp_{i-1,j,k}}$$
+$$dp_{i,j+1,k+b_i-a_i}=\min{dp_{i-1,j,k}}$$
 
-$$dp_{i,j,k-a_i}=\max{dp_{i-1,j,k-a_i}}$$
+$$dp_{i,j,k-a_i}=\min{dp_{i-1,j,k-a_i}}$$
 
 <details>
 
@@ -278,4 +278,10 @@ $$dp_{i,j,k-a_i}=\max{dp_{i-1,j,k-a_i}}$$
     }
     ~~~
 </details>
+
+## C
+
+[原题连接](https://codeforces.com/gym/105486/problem/E)
+
+24年成都站原题。
 
