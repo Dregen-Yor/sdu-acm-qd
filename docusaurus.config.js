@@ -120,6 +120,12 @@ const config = {
           },
         ],
       },
+      giscus: {
+        repo: 'Dregen-Yor/sdu-acm-qd',
+        repoId: 'R_kgDONpc2yw',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDONpc2y84CnvlR'
+      },
       footer: {
         style: 'dark',
         links: [
