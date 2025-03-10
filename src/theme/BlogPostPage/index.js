@@ -13,6 +13,8 @@ import BlogPostPageStructuredData from '@theme/BlogPostPage/StructuredData';
 import TOC from '@theme/TOC';
 import ContentVisibility from '@theme/ContentVisibility';
 import Comment from '../../components/comment';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function BlogPostPageContent({sidebar, children}) {
   const {metadata, toc} = useBlogPost();
   const {nextItem, prevItem, frontMatter} = metadata;
@@ -42,6 +44,8 @@ function BlogPostPageContent({sidebar, children}) {
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
       {!hideComment && <Comment />}
+      <Analytics />
+      <SpeedInsights/>
     </BlogLayout>
   );
 }
