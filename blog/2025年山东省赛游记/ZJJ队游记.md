@@ -1,6 +1,6 @@
 ---
-slug: 山东省赛比赛反思
-title: 山东省赛比赛反思
+slug: 山东省赛比赛反思--电话微波炉（暂定）
+title: 山东省赛比赛反思--电话微波炉（暂定）
 authors: []
 tags: [travelogue]
 ---
