@@ -8,10 +8,10 @@ hello:
   permalink: /hello
   description: Hello tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+travelogue:
+  label: Travelogue
+  permalink: /travelogue
+  description: 游记
 
 solution:
   label: 题解
