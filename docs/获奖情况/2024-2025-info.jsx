@@ -100,6 +100,51 @@ const dataSource = [
     medal: 'silver',
     address: '上海站',
   },
+  {
+    key: '12',
+    teamname: '猫学长，靠谱',
+    name1: '钟以楠',
+    name2: '陈方航',
+    name3: '刘智豪',
+    medal: 'silver',
+    address: '重庆站',
+  },
+  {
+    key: '13',
+    teamname: 'SDU-TCS',
+    name1: '王天竹',
+    name2: '袁胜利',
+    name3: '禚安垣',
+    medal: 'gold',
+    address: '哈尔滨站',
+  },
+  {
+    key: '14',
+    teamname: '应用随机过程',
+    name1: '李玉庭',
+    name2: '苏岳',
+    name3: '王源鑫',
+    medal: 'silver',
+    address: '哈尔滨站',
+  },
+  {
+    key: '15',
+    teamname: '应用随机过程',
+    name1: '李玉庭',
+    name2: '苏岳',
+    name3: '王源鑫',
+    medal: 'silver',
+    address: '重庆站',
+  },
+  {
+    key: '16',
+    teamname: '电话微波炉（暂定）',
+    name1: '詹靖杰',
+    name2: '宿子腾',
+    name3: '董家豪',
+    medal: 'silver',
+    address: '哈尔滨站',
+  },
 ];
 
 const columns = [
@@ -203,7 +248,15 @@ const columns = [
       {
         text: '成都站',
         value: '成都站',
-      }
+      },
+      {
+        text: '哈尔滨站',
+        value: '哈尔滨站',
+      },
+      {
+        text: '重庆站',
+        value: '重庆站',
+      },
     ],
     filterMode: 'menu',
     filterSearch: true,
