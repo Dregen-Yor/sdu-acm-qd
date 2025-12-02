@@ -1,0 +1,18 @@
+---
+sidebar_position: 1
+hide_comments: true
+---
+# 2025-2026 学年上学期获奖情况
+
+以下是山东大学（青岛）ACM 实验室在 2025-2026 上学期的获奖情况。
+
+
+import {Table,Tag} from 'antd';
+
+import {dataSource,columns} from './2025-2026-info.jsx'
+
+
+<Table dataSource={dataSource} columns={columns} pagination={{
+          position: ['bottomCenter'],
+          pageSize: 12
+        }}/>
