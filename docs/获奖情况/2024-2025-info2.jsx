@@ -230,7 +230,7 @@ const columns = [
       }
       else if (_ === 'none') {
         color = '#808080';
-        text = '无奖';
+        text = '优胜奖';
       }
       return (
         <Tag color={color} style={{ width: '50%', textAlign: 'center',fontSize:16 }} >

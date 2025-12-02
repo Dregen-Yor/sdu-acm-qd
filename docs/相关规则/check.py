@@ -42,7 +42,7 @@ def check_people(first_file, second_file,
     """
     # 加载第一个表的姓名 map
     name_map = load_names_map(first_file, first_sheet, first_name_col)
-
+    print(name_map)
     # 读取第二个表中所有数据
     df2 = pd.read_excel(second_file, sheet_name=second_sheet)
 
